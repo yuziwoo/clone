@@ -564,6 +564,12 @@ header .header_right .header_search .header_search_form_on .header_search_button
   padding: 6.75rem 2.375rem 2.25rem;
 }
 
+.header_hamb_menu .header_hamb_gnb {
+  overflow-y : scroll;
+  height: calc(100vh - 9rem - 90px);
+  width: calc(100vw - 4.755rem);
+}
+
 .header_hamb_menu .header_hamb_gnb .header_hamb_1depth {
   margin-bottom: 0.9375rem;
 }
