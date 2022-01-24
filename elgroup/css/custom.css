@@ -181,7 +181,7 @@ header .header_gnb ul .header_gnb_list .header_list_hover a {
 }
 
 header .header_gnb ul .header_gnb_list .header_list_hover a:hover {
-  color: #8cbac5;
+  color: #b7e2ea;
 }
 
 header .header_gnb ul .header_gnb_list .header_list_hover1 {
@@ -300,7 +300,7 @@ header .header_right .header_search .header_search_form_on .header_search_input 
   }
   100%{
     opacity: 1;
-    width: 200px;
+    width: 250px;
   }
 }
 
