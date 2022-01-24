@@ -54,6 +54,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
       header_hamb_menu.classList.remove("header_hamb_menu_off");
       header_hamb_menu.classList.add("header_hamb_menu_on");
       header_search_button.style.display = "none";
+      header.classList.remove("header_top");
     }else if(!header_hamb.classList.contains("header_hamb_off")){
       header_hamb.classList.add("header_hamb_off");
       header_hamb.classList.remove("header_hamb_on");
@@ -62,6 +63,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
       header_hamb_menu.classList.add("header_hamb_menu_off");
       header_hamb_menu.classList.remove("header_hamb_menu_on");
       header_search_button.style.display = "block";
+      scrolling();
     }
   })
 });
