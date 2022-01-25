@@ -475,3 +475,12 @@
     transition: opacity 1s, transform 1s;
   }
 }
+
+/* section 03 */
+.section_03 .section_title h1, .section_04 .section_title h1{
+  text-align: left;
+}
+
+/* section 04 */
+
+/* section 05 */

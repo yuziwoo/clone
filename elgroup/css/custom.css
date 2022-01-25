@@ -51,7 +51,6 @@ body {
   margin: 0;
   font-family: 'Roboto', 'Noto Sans KR', sans-serif;
   word-break: keep-all;
-  height: 6000px;
   opacity: 0;
   animation: opening 1.3s 0.2s forwards ease-out;
   line-height: 1.5;
@@ -748,5 +747,191 @@ header .header_right .header_search .header_search_form_on .header_search_button
   }
   header .header_right .header_search .header_search_form .header_search_input {
     right: 44px;
+  }
+}
+
+
+
+/* footer */
+footer {
+  width: 100%;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer span {
+  font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(69, 69, 69, 1);
+  transition: color 0.5s;
+  padding-bottom: 1rem;
+}
+
+footer a {
+  display: block;
+  padding-bottom: 1rem;
+}
+
+footer a:hover span {
+  color: #99c2cc;
+}
+
+footer h3 {
+  font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #99c2cc;
+  margin-bottom: 2rem;
+}
+
+footer .footer_up {
+  width: 100%;
+  max-width: 1170px;
+  padding: 4rem 0 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .footer_up .footer_content {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+footer .footer_up .footer_02, footer .footer_up .footer_03 {
+  width: 12.5rem;
+}
+
+footer .footer_up .footer_02 {
+  padding-left: 3.5rem;
+}
+
+footer .footer_up .footer_02 a, footer .footer_up .footer_03 a {
+  padding-bottom: 0.5rem;
+}
+
+footer .footer_up .footer_02 a span, footer .footer_up .footer_03 a span{
+  padding-bottom: 0.5rem;
+}
+
+footer .footer_sns {
+  width: 13.5rem;
+}
+
+footer .footer_sns ul {
+  width: 13.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .footer_sns ul li {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0px 0.5rem;
+}
+
+footer .footer_sns ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: white;
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+  transition: background-color 0.5s;
+  padding-bottom: 0px;
+}
+
+footer .footer_sns ul li a:hover {
+  background-color: rgb(184, 226, 234);
+}
+
+footer .footer_sns figure img {
+  width: 100%;
+  height: 100%;
+  max-width: 19px;
+  max-height: 15px;
+}
+
+footer .footer_down {
+  width: 100%;
+  max-width: 1170px;
+  padding: 2rem 0px;
+  border-top: 1px solid #ebebeb;
+  display: flex;
+  justify-content: center;
+}
+
+footer .footer_down span {
+  color: #999999;
+  text-align: center;
+  font-size: 0.875rem;
+  padding-bottom: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+  footer .footer_up, footer .footer_down {
+    width: calc(100% - 60px);
+  }
+}
+@media screen and (max-width: 860px) {
+  footer .footer_up .footer_02, footer .footer_up .footer_03 {
+    padding-left: 1rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  footer .footer_up, footer .footer_up, footer .footer_up, footer .footer_down {
+    width: calc(100% - 20px);
+  }
+  footer .footer_up .footer_02, footer .footer_up .footer_03 {
+    padding-left: 0px;
+  }
+  footer .footer_up {
+    padding: 2rem 0 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+  footer .footer_up .footer_02, footer .footer_up .footer_03 {
+    display: block;
+    width: 100%;
+  }
+  footer .footer_up .footer_02 a {
+    display: inline-block;
+    padding: 0px 1rem;
+    border-right: 1px solid #ebebeb;
+  }
+  footer .footer_up .footer_03 a {
+    display: inline-block;
+    padding: 0px 0.5rem;
+    border-right: 1px solid #ebebeb;
+  }
+  footer .footer_up .footer_02 .first_a {
+    padding: 0px 1rem 0px 0px;
+  }
+  footer .footer_up .footer_03 .first_a {
+    padding: 0px 0.5rem 0px 0px;
+  }
+  footer .footer_up .footer_02 .last_a {
+    border-right: none;
+  }
+  footer .footer_up .footer_03 .last_a {
+    border-right: none;
+  }
+  footer .footer_sns ul li:first-child {
+    padding: 0px 0.5rem 0px 0px;
+  }
+  footer .footer_sns {
+    margin-top: 1.5rem;
   }
 }
