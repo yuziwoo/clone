@@ -39,10 +39,10 @@ window.addEventListener("DOMContentLoaded", (e) => {
 
   let section_01_move = () => {
     if (section_01_direction == "left") {
-      section_01_slide.style.transition = "transform 0.3s";
+      section_01_slide.style.transition = "transform 0.4s";
       section_01_slide.style.transform = "translateX(100vw)";
     } else if (section_01_direction == "right") {
-      section_01_slide.style.transition = "transform 0.3s";
+      section_01_slide.style.transition = "transform 0.4s";
       section_01_slide.style.transform = "translateX(-100vw)";
     }
   }
@@ -60,28 +60,28 @@ window.addEventListener("DOMContentLoaded", (e) => {
       section_01_slide_number = 1;
       section_01_move();
       section_01_tab_reset();
-      setTimeout(section_01_reset, 300);
+      setTimeout(section_01_reset, 400);
 
     } else if (section_01_slide_number == 3 && !section_01_moving) {
       section_01_moving = true;
       section_01_slide_number = 2;
       section_01_move();
       section_01_tab_reset();
-      setTimeout(section_01_reset, 300);
+      setTimeout(section_01_reset, 400);
 
     } else if (section_01_slide_number == 4 && !section_01_moving) {
       section_01_moving = true;
       section_01_slide_number = 3;
       section_01_move();
       section_01_tab_reset();
-      setTimeout(section_01_reset, 300);
+      setTimeout(section_01_reset, 400);
 
     } else if (section_01_slide_number == 5 && !section_01_moving) {
       section_01_moving = true;
       section_01_slide_number = 4;
       section_01_move();
       section_01_tab_reset();
-      setTimeout(section_01_reset, 300);
+      setTimeout(section_01_reset, 400);
     }
   }
 
@@ -92,28 +92,28 @@ window.addEventListener("DOMContentLoaded", (e) => {
       section_01_slide_number = 3;
       section_01_move();
       section_01_tab_reset();
-      setTimeout(section_01_reset, 300);
+      setTimeout(section_01_reset, 400);
 
     } else if (section_01_slide_number == 3 && !section_01_moving) {
       section_01_moving = true;
       section_01_slide_number = 4;
       section_01_move();
       section_01_tab_reset();
-      setTimeout(section_01_reset, 300);
+      setTimeout(section_01_reset, 400);
 
     } else if (section_01_slide_number == 4 && !section_01_moving) {
       section_01_moving = true;
       section_01_slide_number = 5;
       section_01_move();
       section_01_tab_reset();
-      setTimeout(section_01_reset, 300);
+      setTimeout(section_01_reset, 400);
 
     } else if (section_01_slide_number == 5 && !section_01_moving) {
       section_01_moving = true;
       section_01_slide_number = 6;
       section_01_move();
       section_01_tab_reset();
-      setTimeout(section_01_reset, 300);
+      setTimeout(section_01_reset, 400);
     }
   }
 
@@ -129,24 +129,24 @@ window.addEventListener("DOMContentLoaded", (e) => {
     if (section_01_slide_number == 3 && !section_01_moving) {
       section_01_moving = true;
       section_01_slide_number = 2;
-      section_01_slide.style.transition = "transform 0.3s";
+      section_01_slide.style.transition = "transform 0.4s";
       section_01_slide.style.transform = "translateX(100vw)";
       section_01_tab_reset();
-      setTimeout(section_01_reset, 300);
+      setTimeout(section_01_reset, 400);
     } else if (section_01_slide_number == 4 && !section_01_moving) {
       section_01_moving = true;
       section_01_slide_number = 2;
-      section_01_slide.style.transition = "transform 0.3s";
+      section_01_slide.style.transition = "transform 0.4s";
       section_01_slide.style.transform = "translateX(200vw)";
       section_01_tab_reset();
-      setTimeout(section_01_reset, 300);
+      setTimeout(section_01_reset, 400);
     } else if (section_01_slide_number == 5 && !section_01_moving) {
       section_01_moving = true;
       section_01_slide_number = 2;
-      section_01_slide.style.transition = "transform 0.3s";
+      section_01_slide.style.transition = "transform 0.4s";
       section_01_slide.style.transform = "translateX(300vw)";
       section_01_tab_reset();
-      setTimeout(section_01_reset, 300);
+      setTimeout(section_01_reset, 400);
     }
   })
 
@@ -154,24 +154,24 @@ window.addEventListener("DOMContentLoaded", (e) => {
     if (section_01_slide_number == 4 && !section_01_moving) {
       section_01_moving = true;
       section_01_slide_number = 3;
-      section_01_slide.style.transition = "transform 0.3s";
+      section_01_slide.style.transition = "transform 0.4s";
       section_01_slide.style.transform = "translateX(100vw)";
       section_01_tab_reset();
-      setTimeout(section_01_reset, 300);
+      setTimeout(section_01_reset, 400);
     } else if (section_01_slide_number == 5 && !section_01_moving) {
       section_01_moving = true;
       section_01_slide_number = 3;
-      section_01_slide.style.transition = "transform 0.3s";
+      section_01_slide.style.transition = "transform 0.4s";
       section_01_slide.style.transform = "translateX(200vw)";
       section_01_tab_reset();
-      setTimeout(section_01_reset, 300);
+      setTimeout(section_01_reset, 400);
     } else if (section_01_slide_number == 2 && !section_01_moving) {
       section_01_moving = true;
       section_01_slide_number = 3;
-      section_01_slide.style.transition = "transform 0.3s";
+      section_01_slide.style.transition = "transform 0.4s";
       section_01_slide.style.transform = "translateX(-100vw)";
       section_01_tab_reset();
-      setTimeout(section_01_reset, 300);
+      setTimeout(section_01_reset, 400);
     }
   })
 
@@ -179,24 +179,24 @@ window.addEventListener("DOMContentLoaded", (e) => {
     if (section_01_slide_number == 5 && !section_01_moving) {
       section_01_moving = true;
       section_01_slide_number = 4;
-      section_01_slide.style.transition = "transform 0.3s";
+      section_01_slide.style.transition = "transform 0.4s";
       section_01_slide.style.transform = "translateX(100vw)";
       section_01_tab_reset();
-      setTimeout(section_01_reset, 300);
+      setTimeout(section_01_reset, 400);
     } else if (section_01_slide_number == 2 && !section_01_moving) {
       section_01_moving = true;
       section_01_slide_number = 4;
-      section_01_slide.style.transition = "transform 0.3s";
+      section_01_slide.style.transition = "transform 0.4s";
       section_01_slide.style.transform = "translateX(-200vw)";
       section_01_tab_reset();
-      setTimeout(section_01_reset, 300);
+      setTimeout(section_01_reset, 400);
     } else if (section_01_slide_number == 3 && !section_01_moving) {
       section_01_moving = true;
       section_01_slide_number = 4;
-      section_01_slide.style.transition = "transform 0.3s";
+      section_01_slide.style.transition = "transform 0.4s";
       section_01_slide.style.transform = "translateX(-100vw)";
       section_01_tab_reset();
-      setTimeout(section_01_reset, 300);
+      setTimeout(section_01_reset, 400);
     }
   })
 
@@ -204,24 +204,24 @@ window.addEventListener("DOMContentLoaded", (e) => {
     if (section_01_slide_number == 2 && !section_01_moving) {
       section_01_moving = true;
       section_01_slide_number = 5;
-      section_01_slide.style.transition = "transform 0.3s";
+      section_01_slide.style.transition = "transform 0.4s";
       section_01_slide.style.transform = "translateX(-300vw)";
       section_01_tab_reset();
-      setTimeout(section_01_reset, 300);
+      setTimeout(section_01_reset, 400);
     } else if (section_01_slide_number == 3 && !section_01_moving) {
       section_01_moving = true;
       section_01_slide_number = 5;
-      section_01_slide.style.transition = "transform 0.3s";
+      section_01_slide.style.transition = "transform 0.4s";
       section_01_slide.style.transform = "translateX(-200vw)";
       section_01_tab_reset();
-      setTimeout(section_01_reset, 300);
+      setTimeout(section_01_reset, 400);
     } else if (section_01_slide_number == 4 && !section_01_moving) {
       section_01_moving = true;
       section_01_slide_number = 5;
-      section_01_slide.style.transition = "transform 0.3s";
+      section_01_slide.style.transition = "transform 0.4s";
       section_01_slide.style.transform = "translateX(-100vw)";
       section_01_tab_reset();
-      setTimeout(section_01_reset, 300);
+      setTimeout(section_01_reset, 400);
     }
   })
 
@@ -231,34 +231,62 @@ window.addEventListener("DOMContentLoaded", (e) => {
   section_01.addEventListener("mousedown", (e) => {
     touching = true;
     touchX[0] = e.pageX;
-  });
+  }, false);
 
   section_01.addEventListener("mousemove", (e) => {
     if (touching) {
       touchX[1] = e.pageX;
       section_01_slide.style.transform = `translateX(${touchX[1] - touchX[0]}px)`;
 
-      if (touchX[1] > touchX[0] && Math.abs(touchX[1] - touchX[0]) >= window.innerWidth / 4) {
+      if (touchX[1] > touchX[0] && Math.abs(touchX[1] - touchX[0]) >= window.innerWidth / 5) {
         touching = false;
         section_01_left_move();
-      } else if (touchX[1] < touchX[0]  && Math.abs(touchX[1] - touchX[0]) >= window.innerWidth / 4) {
+        touchX[0] = 0;
+        touchX[1] = 0;
+      } else if (touchX[1] < touchX[0]  && Math.abs(touchX[1] - touchX[0]) >= window.innerWidth / 5) {
         touching = false;
         section_01_right_move();
+        touchX[0] = 0;
+        touchX[1] = 0;
       }
     }
   });
 
-  section_01.addEventListener("mouseup", (e) => {
-    touching = false;
-    if (Math.abs(touchX[1] - touchX[0]) < window.innerWidth / 4) {
-      section_01_slide.style.transition = "transform 0.3s";
-      section_01_slide.style.transform = "translateX(0px)";
-      setTimeout(section_01_reset, 300);
-    } else if (touchX[1] > touchX[0]) {
-      section_01_left_move();
-    } else if (touchX[1] < touchX[0]) {
-      section_01_right_move();
+  section_01.addEventListener("mouseleave", (e) => {
+    if (touching) {
+      touchX[1] = e.pageX;
+      section_01_slide.style.transform = `translateX(${touchX[1] - touchX[0]}px)`;
+      if (Math.abs(touchX[1] - touchX[0]) < window.innerWidth / 5) {
+        section_01_slide.style.transition = "transform 0.4s";
+        section_01_slide.style.transform = "translateX(0px)";
+        setTimeout(section_01_reset, 400);
+        touchX[0] = 0;
+        touchX[1] = 0;
+      }
     }
+    touching = false;
+  });
+
+  section_01.addEventListener("mouseup", (e) => {
+    if (touching) {
+      if (Math.abs(touchX[1] - touchX[0]) < window.innerWidth / 5) {
+        section_01_slide.style.transition = "transform 0.4s";
+        section_01_slide.style.transform = "translateX(0px)";
+        setTimeout(section_01_reset, 400);
+        touchX[0] = 0;
+        touchX[1] = 0;
+      } else if (touchX[1] > touchX[0]) {
+        section_01_left_move();
+        touchX[0] = 0;
+        touchX[1] = 0;
+      } else if (touchX[1] < touchX[0]) {
+        section_01_right_move();
+        touchX[0] = 0;
+        touchX[1] = 0;
+      }
+    }
+    touching = false;
+    console.log(touching)
   });
 
 

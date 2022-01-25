@@ -72,6 +72,9 @@
   font-weight: bold;
   font-family: 'Noto Serif', serif;
   margin-bottom: 20px;
+  animation: opening 1s 1s forwards;
+  opacity: 0;
+  transform: translateY(5vh);
 }
 
 .section_01_text h2 {
@@ -81,6 +84,20 @@
   font-weight: 500;
   font-family: 'Noto Sans KR', sans-serif;
   margin-bottom: 24px;
+  animation: opening 1s 1.5s forwards;
+  opacity: 0;
+  transform: translateY(5vh);
+}
+
+@keyframes opening {
+  form {
+    opacity: 0;
+    transform: translateY(5vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 .section_01 .slide_control_wrap {
@@ -173,4 +190,18 @@
   width: 100%;
   height: 25vh;
   background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0.474) 45%, rgba(255, 255, 255, 0) 100%);
+}
+
+@media screen and (max-width: 560px) {
+  .section_01_text {
+    padding-left: 10px;
+  }
+  .section_01_text h1 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+  .section_01_text h2 {
+    font-size: 16px;
+    line-height: 28px;
+  }
 }
