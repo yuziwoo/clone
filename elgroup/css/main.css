@@ -204,6 +204,12 @@
     font-size: 16px;
     line-height: 28px;
   }
+  .section_01 .slide_control_wrap .slide_control .slide_tab .slide_tab_list {
+    width: 40px;
+  }
+  .section_01 .slide_control_wrap .slide_control .slide_tab {
+    width: 166px;
+  }
 }
 
 

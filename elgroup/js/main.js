@@ -289,6 +289,54 @@ window.addEventListener("DOMContentLoaded", (e) => {
   });
 
 
+  // touch 버전
+
+  section_01.addEventListener("touchstart", (e) => {
+    touching = true;
+    touchX[0] = e.targetTouches[0].pageX;
+  }, false);
+
+  section_01.addEventListener("touchmove", (e) => {
+    if (touching) {
+      touchX[1] = e.targetTouches[0].pageX;
+      section_01_slide.style.transform = `translateX(${touchX[1] - touchX[0]}px)`;
+
+      if (touchX[1] > touchX[0] && Math.abs(touchX[1] - touchX[0]) >= window.innerWidth / 5) {
+        touching = false;
+        section_01_left_move();
+        touchX[0] = 0;
+        touchX[1] = 0;
+      } else if (touchX[1] < touchX[0]  && Math.abs(touchX[1] - touchX[0]) >= window.innerWidth / 5) {
+        touching = false;
+        section_01_right_move();
+        touchX[0] = 0;
+        touchX[1] = 0;
+      }
+    }
+  });
+
+  section_01.addEventListener("touchend", (e) => {
+    if (touching) {
+      if (Math.abs(touchX[1] - touchX[0]) < window.innerWidth / 5) {
+        section_01_slide.style.transition = "transform 0.4s";
+        section_01_slide.style.transform = "translateX(0px)";
+        setTimeout(section_01_reset, 400);
+        touchX[0] = 0;
+        touchX[1] = 0;
+      } else if (touchX[1] > touchX[0]) {
+        section_01_left_move();
+        touchX[0] = 0;
+        touchX[1] = 0;
+      } else if (touchX[1] < touchX[0]) {
+        section_01_right_move();
+        touchX[0] = 0;
+        touchX[1] = 0;
+      }
+    }
+    touching = false;
+  });
+
+
   // scrolling 이벤트
 
   let event_turn = [];
