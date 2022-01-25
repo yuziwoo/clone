@@ -348,6 +348,9 @@ window.addEventListener("DOMContentLoaded", (e) => {
   let section_02_content = document.getElementsByClassName("section_02_content");
   let section_03_title = document.getElementsByClassName("section_title")[1];
   let section_04_title = document.getElementsByClassName("section_title")[2];
+  let section_05 = document.getElementsByClassName("section_05")[0];
+  let section_05_text = document.getElementsByClassName("section_05_text")[0];
+  let section_05_button = document.getElementsByClassName("section_05_button")[0];
 
   let scrolling_main = (e) => {
     if (document.documentElement.scrollTop + window.innerHeight - 100 >= section_02.offsetTop && !event_turn[0]) {
@@ -389,6 +392,16 @@ window.addEventListener("DOMContentLoaded", (e) => {
       event_turn[7] = true;
       section_04_title.style.opacity = 1;
       section_04_title.style.transform = "translateY(0px)";
+    }
+    if (document.documentElement.scrollTop + window.innerHeight - 100 >= section_05.offsetTop && !event_turn[8]) {
+      event_turn[8] = true;
+      section_05_text.style.opacity = 1;
+      section_05_text.style.transform = "translateY(0px)";
+    }
+    if (document.documentElement.scrollTop + window.innerHeight - 100 >= section_05.offsetTop && !event_turn[9]) {
+      event_turn[9] = true;
+      section_05_button.style.opacity = 1;
+      section_05_button.style.transform = "translateY(0px)";
     }
   } //scrolling end
 
