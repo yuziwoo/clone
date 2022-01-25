@@ -1,6 +1,5 @@
 window.addEventListener("DOMContentLoaded", (e) => {
   let header = document.getElementsByTagName("header")[0];
-  let rect = document.documentElement.getBoundingClientRect();
   let header_background = document.getElementsByClassName("header_background")[0];
   let header_gnb_list = document.getElementsByClassName("header_gnb_list");
   let header_list_hover = document.getElementsByClassName("header_list_hover");
@@ -30,8 +29,6 @@ window.addEventListener("DOMContentLoaded", (e) => {
   })
 
   let scrolling = (e) => {
-    rect = document.documentElement.getBoundingClientRect();
-
     if (document.documentElement.scrollTop >= 100) {
       header.classList.remove("header_top");
       header_background.style.opacity = 1;

@@ -67,8 +67,9 @@ body {
   }
 }
 
-h1,h2,h3,h4,h5,h6,p,span,figure {
+h1,h2,h3,h4,h5,h6,p,span,figure,div,section,figure,img {
     margin: 0;
+    box-sizing: border-box;
 }
 
 ul,li {

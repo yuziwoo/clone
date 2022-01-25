@@ -286,8 +286,54 @@ window.addEventListener("DOMContentLoaded", (e) => {
       }
     }
     touching = false;
-    console.log(touching)
   });
 
+
+  // scrolling 이벤트
+
+  let event_turn = [];
+  for (let i=0; i<10; i++) {
+    event_turn.push(false);
+  }
+  let section_02 = document.getElementsByClassName("section_02")[0];
+  let section_02_title = document.getElementsByClassName("section_title")[0];
+  let section_02_content = document.getElementsByClassName("section_02_content");
+
+  let scrolling_main = (e) => {
+    if (document.documentElement.scrollTop + window.innerHeight - 100 >= section_02.offsetTop && !event_turn[0]) {
+      event_turn[0] = true;
+      section_02_title.style.opacity = 1;
+      section_02_title.style.transform = "translateY(0px)";
+    }
+    if (document.documentElement.scrollTop + window.innerHeight - 50 >= section_02_content[0].offsetTop && !event_turn[1]) {
+      event_turn[1] = true;
+      section_02_content[0].style.opacity = 1;
+      section_02_content[0].style.transform = "translateY(0px)";
+    }
+    if (document.documentElement.scrollTop + window.innerHeight - 50 >= section_02_content[1].offsetTop && !event_turn[2]) {
+      event_turn[2] = true;
+      section_02_content[1].style.opacity = 1;
+      section_02_content[1].style.transform = "translateY(0px)";
+    }
+    if (document.documentElement.scrollTop + window.innerHeight - 50 >= section_02_content[2].offsetTop && !event_turn[3]) {
+      event_turn[3] = true;
+      section_02_content[2].style.opacity = 1;
+      section_02_content[2].style.transform = "translateY(0px)";
+    }
+    if (document.documentElement.scrollTop + window.innerHeight - 50 >= section_02_content[3].offsetTop && !event_turn[4]) {
+      event_turn[4] = true;
+      section_02_content[3].style.opacity = 1;
+      section_02_content[3].style.transform = "translateY(0px)";
+    }
+    if (document.documentElement.scrollTop + window.innerHeight - 50 >= section_02_content[4].offsetTop && !event_turn[5]) {
+      event_turn[5] = true;
+      section_02_content[4].style.opacity = 1;
+      section_02_content[4].style.transform = "translateY(0px)";
+    }
+  } //scrolling end
+
+  scrolling_main();
+  document.addEventListener("scroll", scrolling_main);
+  window.addEventListener("resize", scrolling_main);
 
 }); // 전체 종료
