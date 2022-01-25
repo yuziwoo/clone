@@ -346,6 +346,8 @@ window.addEventListener("DOMContentLoaded", (e) => {
   let section_02 = document.getElementsByClassName("section_02")[0];
   let section_02_title = document.getElementsByClassName("section_title")[0];
   let section_02_content = document.getElementsByClassName("section_02_content");
+  let section_03_title = document.getElementsByClassName("section_title")[1];
+  let section_04_title = document.getElementsByClassName("section_title")[2];
 
   let scrolling_main = (e) => {
     if (document.documentElement.scrollTop + window.innerHeight - 100 >= section_02.offsetTop && !event_turn[0]) {
@@ -377,6 +379,16 @@ window.addEventListener("DOMContentLoaded", (e) => {
       event_turn[5] = true;
       section_02_content[4].style.opacity = 1;
       section_02_content[4].style.transform = "translateY(0px)";
+    }
+    if (document.documentElement.scrollTop + window.innerHeight - 50 >= section_03_title.offsetTop && !event_turn[6]) {
+      event_turn[6] = true;
+      section_03_title.style.opacity = 1;
+      section_03_title.style.transform = "translateY(0px)";
+    }
+    if (document.documentElement.scrollTop + window.innerHeight - 50 >= section_04_title.offsetTop && !event_turn[7]) {
+      event_turn[7] = true;
+      section_04_title.style.opacity = 1;
+      section_04_title.style.transform = "translateY(0px)";
     }
   } //scrolling end
 
