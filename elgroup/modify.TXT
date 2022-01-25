@@ -7,6 +7,12 @@ https://yuziwoo.github.io/clone/
 헤더 스크롤 위치값에 따라 글자색,배경색 바뀌는 값 코딩 수정
 헤더 search 버튼 클릭시 효과 생성
 
+Recruit  반응형에만 EL RISE 부문별 경력직 모집 / 플랫폼사업부
+나오던 오류 수정
+Latest News 카테고리 클릭시 Recruit 리스트 사라지는 오류 수정
+ 
+
+
 
 아이디어 제안
 메인 비쥬얼 이미지와 텍스트를 페이지별로
