@@ -9,8 +9,12 @@ https://yuziwoo.github.io/clone/
 
 Recruit  반응형에만 EL RISE 부문별 경력직 모집 / 플랫폼사업부
 나오던 오류 수정
+Latest News 카테고리 클릭 효과 적용
+Latest News 카테고리 모바일에서도 가능하게 개발
+Latest News 카테고리 반응형 더 부드럽게 개발
+Latest News All카테고리 클릭시 가장 하단의 콘텐츠들 짤리는 오류 수정
 Latest News 카테고리 클릭시 Recruit 리스트 사라지는 오류 수정
- 
+
 
 
 

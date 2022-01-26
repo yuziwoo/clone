@@ -340,19 +340,218 @@ window.addEventListener("DOMContentLoaded", (e) => {
   // scrolling 이벤트
 
   let event_turn = [];
-  for (let i=0; i<10; i++) {
+  for (let i=0; i<11; i++) {
     event_turn.push(false);
   }
   let section_02 = document.getElementsByClassName("section_02")[0];
   let section_02_title = document.getElementsByClassName("section_title")[0];
   let section_02_content = document.getElementsByClassName("section_02_content");
   let section_03_title = document.getElementsByClassName("section_title")[1];
+  let section_03_category_wrap = document.getElementsByClassName("section_03_category_wrap")[0];
+  let section_03_content_wrap = document.getElementsByClassName("section_03_content_wrap")[0];
   let section_04_title = document.getElementsByClassName("section_title")[2];
   let section_05 = document.getElementsByClassName("section_05")[0];
   let section_05_text = document.getElementsByClassName("section_05_text")[0];
   let section_05_button = document.getElementsByClassName("section_05_button")[0];
 
+  let section_03_content = document.getElementsByClassName("section_03_content");
+  let section_03_value = ["active_all", "active_entertainment", "active_commerce", "active_media", "active_tv", "active_park", "active_people"];
+  let section_03_category_button = document.getElementsByClassName("section_03_category_button");
+  let section_03_is_moving = false;
+  let section_03_content_reset = () => {
+      section_03_content[0].style.transform = "scale(0.001)";
+      section_03_content[0].style.opacity = 0;
+      section_03_content[1].style.transform = "scale(0.001)";
+      section_03_content[1].style.opacity = 0;
+      section_03_content[2].style.transform = "scale(0.001)";
+      section_03_content[2].style.opacity = 0;
+      section_03_content[3].style.transform = "scale(0.001)";
+      section_03_content[3].style.opacity = 0;
+      section_03_content[4].style.transform = "scale(0.001)";
+      section_03_content[4].style.opacity = 0;
+      section_03_content[5].style.transform = "scale(0.001)";
+      section_03_content[5].style.opacity = 0;
+      section_03_content[6].style.transform = "scale(0.001)";
+      section_03_content[6].style.opacity = 0;
+      section_03_content[7].style.transform = "scale(0.001)";
+      section_03_content[7].style.opacity = 0;
+  }
+  let section_03_content_width = 384;
+  let section_03_content_height = [255, 214.281];
+  let section_03_mobile = () => {
+      section_03_content[0].style.left = 0;
+      section_03_content[0].style.top = 0;
+      section_03_content[1].style.left = 0;
+      section_03_content[1].style.top = 0;
+      section_03_content[2].style.left = 0;
+      section_03_content[2].style.top = 0;
+      section_03_content[3].style.left = 0;
+      section_03_content[3].style.top = 0;
+      section_03_content[4].style.left = 0;
+      section_03_content[4].style.top = 0;
+      section_03_content[5].style.left = 0;
+      section_03_content[5].style.top = 0;
+      section_03_content[6].style.left = 0;
+      section_03_content[6].style.top = 0;
+      section_03_content[7].style.left = 0;
+      section_03_content[7].style.top = 0;
+  }
+  let section_03_action_01 = () => {
+    section_03_content[0].style.left = 0;
+    section_03_content[0].style.top = 0;
+    section_03_content[0].style.transform = "scale(1)";
+    section_03_content[0].style.opacity = 1;
+
+    section_03_content[1].style.left = `calc(${section_03_content_width}px + 9px)`;
+    section_03_content[1].style.top = 0;
+    section_03_content[1].style.transform = "scale(1)";
+    section_03_content[1].style.opacity = 1;
+
+    section_03_content[2].style.left = `calc(${section_03_content_width*2}px + 18px)`;
+    section_03_content[2].style.top = 0;
+    section_03_content[2].style.transform = "scale(1)";
+    section_03_content[2].style.opacity = 1;
+
+    section_03_content[3].style.left = 0;
+    section_03_content[3].style.top =  `calc(${section_03_content_height[0]}px + 9px)`;
+    section_03_content[3].style.transform = "scale(1)";
+    section_03_content[3].style.opacity = 1;
+
+    section_03_content[4].style.left = `calc(${section_03_content_width}px + 9px)`;
+    section_03_content[4].style.top = `calc(${section_03_content_height[0]}px + 9px)`;
+    section_03_content[4].style.transform = "scale(1)";
+    section_03_content[4].style.opacity = 1;
+
+    section_03_content[5].style.left = `calc(${section_03_content_width*2}px + 18px)`;
+    section_03_content[5].style.top = `calc(${section_03_content_height[1]}px + 9px)`;
+    section_03_content[5].style.transform = "scale(1)";
+    section_03_content[5].style.opacity = 1;
+
+    section_03_content[6].style.left = 0;
+    section_03_content[6].style.top = `calc(${section_03_content_height[0] * 2}px + 18px)`;
+    section_03_content[6].style.transform = "scale(1)";
+    section_03_content[6].style.opacity = 1;
+
+    section_03_content[7].style.left = `calc(${section_03_content_width*2}px + 18px)`;
+    section_03_content[7].style.top = `calc(${section_03_content_height[0] + section_03_content_height[1]}px + 18px)`;
+    section_03_content[7].style.transform = "scale(1)";
+    section_03_content[7].style.opacity = 1;
+
+    if(window.innerWidth <= 800) {
+      section_03_mobile();
+    }
+  }
+  let section_03_action_02 = () => {
+    section_03_content_reset();
+    section_03_content[0].style.left = 0;
+    section_03_content[0].style.top = 0;
+    section_03_content[0].style.transform = "scale(1)";
+    section_03_content[0].style.opacity = 1;
+
+    section_03_content[1].style.left = `calc(${section_03_content_width}px + 9px)`;
+    section_03_content[1].style.top = 0;
+    section_03_content[1].style.transform = "scale(1)";
+    section_03_content[1].style.opacity = 1;
+
+    section_03_content[3].style.left = `calc(${section_03_content_width*2}px + 18px)`;
+    section_03_content[3].style.top = 0;
+    section_03_content[3].style.transform = "scale(1)";
+    section_03_content[3].style.opacity = 1;
+
+    section_03_content[4].style.left = 0;
+    section_03_content[4].style.top = `calc(${section_03_content_height[0]}px + 9px)`;
+    section_03_content[4].style.transform = "scale(1)";
+    section_03_content[4].style.opacity = 1;
+
+    section_03_content[5].style.left = `calc(${section_03_content_width}px + 9px)`;
+    section_03_content[5].style.top = `calc(${section_03_content_height[0]}px + 9px)`;
+    section_03_content[5].style.transform = "scale(1)";
+    section_03_content[5].style.opacity = 1;
+
+    section_03_content[6].style.left = `calc(${section_03_content_width*2}px + 18px)`;
+    section_03_content[6].style.top = `calc(${section_03_content_height[0]}px + 9px)`;
+    section_03_content[6].style.transform = "scale(1)";
+    section_03_content[6].style.opacity = 1;
+
+    if(window.innerWidth <= 800) {
+      section_03_mobile();
+    }
+  }
+  let section_03_action_03 = () => {
+    section_03_content_reset();
+    section_03_content[2].style.left = 0;
+    section_03_content[2].style.top = 0;
+    section_03_content[2].style.transform = "scale(1)";
+    section_03_content[2].style.opacity = 1;
+
+    section_03_content[7].style.left = `calc(${section_03_content_width}px + 9px)`;
+    section_03_content[7].style.top = 0;
+    section_03_content[7].style.transform = "scale(1)";
+    section_03_content[7].style.opacity = 1;
+
+    if(window.innerWidth <= 800) {
+      section_03_mobile();
+    }
+  }
+
+
   let scrolling_main = (e) => {
+
+    if (window.innerWidth > 1190) {
+      if (section_03_content_width != 384) {
+        section_03_content_width = 384;
+        section_03_content_height = [255, 214.281];
+        if (section_03_content_wrap.classList.contains("active_all")) {
+          section_03_action_01();
+        } else if (section_03_content_wrap.classList.contains("active_entertainment")) {
+          section_03_action_02();
+        } else if (section_03_content_wrap.classList.contains("active_commerce")) {
+          section_03_action_03();
+        } else {
+          section_03_content_reset();
+        }
+      }
+    } else if (window.innerWidth > 980) {
+      if (section_03_content_width != 314) {
+        section_03_content_width = 314;
+        section_03_content_height = [208.5, 175];
+        if (section_03_content_wrap.classList.contains("active_all")) {
+          section_03_action_01();
+        } else if (section_03_content_wrap.classList.contains("active_entertainment")) {
+          section_03_action_02();
+        } else if (section_03_content_wrap.classList.contains("active_commerce")) {
+          section_03_action_03();
+        } else {
+          section_03_content_reset();
+        }
+      }
+    } else if (window.innerWidth > 800) {
+      if (section_03_content_width != 254) {
+        section_03_content_width = 254;
+        section_03_content_height = [168.7, 141.5];
+        if (section_03_content_wrap.classList.contains("active_all")) {
+          section_03_action_01();
+        } else if (section_03_content_wrap.classList.contains("active_entertainment")) {
+          section_03_action_02();
+        } else if (section_03_content_wrap.classList.contains("active_commerce")) {
+          section_03_action_03();
+        } else {
+          section_03_content_reset();
+        }
+      }
+    } else {
+      if (section_03_content_wrap.classList.contains("active_all")) {
+        section_03_action_01();
+      } else if (section_03_content_wrap.classList.contains("active_entertainment")) {
+        section_03_action_02();
+      } else if (section_03_content_wrap.classList.contains("active_commerce")) {
+        section_03_action_03();
+      } else {
+        section_03_content_reset();
+      }
+    }
+
+
     if (document.documentElement.scrollTop + window.innerHeight - 100 >= section_02.offsetTop && !event_turn[0]) {
       event_turn[0] = true;
       section_02_title.style.opacity = 1;
@@ -403,10 +602,116 @@ window.addEventListener("DOMContentLoaded", (e) => {
       section_05_button.style.opacity = 1;
       section_05_button.style.transform = "translateY(0px)";
     }
+    if (document.documentElement.scrollTop + window.innerHeight >= section_03_category_wrap.offsetTop && !event_turn[10]) {
+      event_turn[10] = true;
+      section_03_content_wrap.classList.remove("active_none");
+      section_03_content_wrap.classList.add("active_all");
+      document.getElementsByClassName("section_03_category_button")[0].classList.add("section_03_category_button_on");
+
+      section_03_action_01();
+    }
   } //scrolling end
 
   scrolling_main();
   document.addEventListener("scroll", scrolling_main);
   window.addEventListener("resize", scrolling_main);
+
+
+  // section 03 Latest News 카테고리 클릭 이벤트
+  for (let i = 0; i < section_03_category_button.length; i++) {
+    section_03_category_button[i].addEventListener("click", () => {
+
+      if (!section_03_is_moving) {
+        section_03_is_moving = true;
+        section_03_category_button[0].classList.remove("section_03_category_button_on");
+        section_03_category_button[1].classList.remove("section_03_category_button_on");
+        section_03_category_button[2].classList.remove("section_03_category_button_on");
+        section_03_category_button[3].classList.remove("section_03_category_button_on");
+        section_03_category_button[4].classList.remove("section_03_category_button_on");
+        section_03_category_button[5].classList.remove("section_03_category_button_on");
+        section_03_category_button[6].classList.remove("section_03_category_button_on");
+        section_03_content_wrap.classList.remove("active_all");
+        section_03_content_wrap.classList.remove("active_entertainment");
+        section_03_content_wrap.classList.remove("active_commerce");
+        section_03_content_wrap.classList.remove("active_media");
+        section_03_content_wrap.classList.remove("active_tv");
+        section_03_content_wrap.classList.remove("active_park");
+        section_03_content_wrap.classList.remove("active_people");
+
+
+        section_03_category_button[i].classList.add("section_03_category_button_on");
+        section_03_content_wrap.classList.add(section_03_value[i]);
+
+        if (i == 0) {
+          section_03_content[0].style.display = "block";
+          section_03_content[1].style.display = "block";
+          section_03_content[2].style.display = "block";
+          section_03_content[3].style.display = "block";
+          section_03_content[4].style.display = "block";
+          section_03_content[5].style.display = "block";
+          section_03_content[6].style.display = "block";
+          section_03_content[7].style.display = "block";
+        } else if (i == 1) {
+          section_03_content[0].style.display = "block";
+          section_03_content[1].style.display = "block";
+          section_03_content[3].style.display = "block";
+          section_03_content[4].style.display = "block";
+          section_03_content[5].style.display = "block";
+          section_03_content[6].style.display = "block";
+          setTimeout(() => {
+            section_03_content[2].style.display = "none";
+            section_03_content[7].style.display = "none";
+          },500);
+        } else if (i == 2) {
+          section_03_content[2].style.display = "block";
+          section_03_content[7].style.display = "block";
+          setTimeout(() => {
+            section_03_content[0].style.display = "none";
+            section_03_content[1].style.display = "none";
+            section_03_content[3].style.display = "none";
+            section_03_content[4].style.display = "none";
+            section_03_content[5].style.display = "none";
+            section_03_content[6].style.display = "none";
+          },500);
+        } else if (i > 2) {
+          setTimeout(() => {
+            section_03_content[0].style.display = "none";
+            section_03_content[1].style.display = "none";
+            section_03_content[3].style.display = "none";
+            section_03_content[4].style.display = "none";
+            section_03_content[5].style.display = "none";
+            section_03_content[6].style.display = "none";
+            section_03_content[2].style.display = "none";
+            section_03_content[7].style.display = "none";
+          },500);
+        }
+
+
+          if (i == 0) {
+            setTimeout(() => {
+              section_03_action_01();
+            },50);
+          } else if (i == 1) {
+            setTimeout(() => {
+              section_03_action_02();
+            },50);
+          } else if (i == 2) {
+            setTimeout(() => {
+              section_03_action_03();
+            },50);
+          } else if (i > 2) {
+              setTimeout(() => {
+                section_03_content_reset();
+              },50)
+          }
+
+
+
+        setTimeout(() => {
+          section_03_is_moving = false;
+        }, 500);
+      }
+    }) // 클릭 이벤트 종료
+  }
 
 }); // 전체 종료
