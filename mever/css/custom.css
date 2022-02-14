@@ -205,7 +205,7 @@ header .app_download .m_download a {
   padding: 5px;
 }
 
-@media screen and (max-width: 1315px) {
+@media screen and (max-width: 1330px) {
   header {
     height: 74px;
     padding: 0px 7rem;
@@ -237,7 +237,7 @@ header .app_download .m_download a {
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1110px) {
   header {
     height: 64px;
     padding: 0px 4rem;
@@ -262,7 +262,7 @@ header .app_download .m_download a {
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 970px) {
   header {
     height: 64px;
     padding: 0px 1.5rem;

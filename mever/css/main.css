@@ -2,7 +2,6 @@ main {
   width: 100%;
   max-width: 1920px;
   position: relative;
-  height: 7000px;
   background-image: url("../img/main/star_move.gif");
   background-repeat: repeat-y;
   background-size: contain;
@@ -40,7 +39,15 @@ main .main_person {
   position: fixed;
   left: calc(50% - 140px);
   top: 150px;
-  z-index: 2;
+  z-index: 3;
+  transform: scale(0.5) translateY(-80px);
+  opacity: 0.3;
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+main .main_person_active {
+  transform: scale(1) translateY(0px);
+  opacity: 1;
 }
 
 @media screen and (max-width: 860px) {
@@ -50,4 +57,304 @@ main .main_person {
     left: calc(50% - 110px);
     top: 150px;
   }
+}
+
+main section {
+  position: relative;
+  z-index: 11;
+}
+
+main .section_01 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 70px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+main .section_01 .text {
+  padding-left: 30px;
+}
+
+main .section_01 .text h1 {
+  display: inline;
+  font-size: 70px;
+  font-weight: 700px;
+  line-height: 80px;
+}
+
+main .section_01 .text h1:nth-child(2) {
+  opacity: 0;
+  transform: scale(0.1);
+  display: inline-block;
+}
+
+main .section_01 .text .active {
+  animation: opening_01 1s 0.8s forwards;
+}
+
+@keyframes opening_01 {
+  from {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+main .section_01 .video video {
+  width: 500px;
+  height: 100%;
+}
+
+main .section_01 .video iframe {
+  display: none;
+}
+
+@media screen and (max-width: 1330px) {
+  main .section_01 .text {
+    padding-left: 0px;
+  }
+  main .section_01 .text h1 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  main .section_01 {
+    padding: 0px 40px;
+  }
+  main .section_01 .text h1 {
+    font-size: 48px;
+    line-height: 58px;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  main .section_01 {
+    padding: 0px 15px;
+  }
+  main .section_01 .text h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+@media screen and (max-width: 860px) {
+  main .section_01 {
+    padding: 100px 15px 0px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  main .section_01 .video {
+    width: 100%;
+    height: calc(100vh - 400px);
+  }
+  main .section_01 .video video{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  main .section_01 .video iframe {
+    display: block;
+  }
+  main .section_01 .text {
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main .section_01 .text h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  main .section_01 .video {
+    height: calc(100vh - 350px);
+  }
+}
+
+main .section_02 {
+  width: 100%;
+  padding: 150px 100px;
+}
+
+main .section_02 .text h1 {
+  display: block;
+  font-size: 70px;
+  font-weight: 700px;
+  line-height: 80px;
+  padding-bottom: 20px;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+main .section_02 .text span {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+main .section_02 .text .active {
+  animation: opening_02 1s forwards;
+}
+
+@keyframes opening_02 {
+  from {
+    opacity: 0.1;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  main .section_02 {
+    padding: 150px 70px;
+  }
+  main .section_02 .text h1 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+@media screen and (max-width: 1110px) {
+  main .section_02 {
+    padding: 150px 40px;
+  }
+  main .section_02 .text h1 {
+    font-size: 48px;
+    line-height: 58px;
+  }
+}
+@media screen and (max-width: 970px) {
+  main .section_02 {
+    padding: 150px 15px;
+  }
+  main .section_02 .text h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  main .section_02 .text span {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+@media screen and (max-width: 860px) {
+  main .section_02 {
+    padding: 100px 15px 150px;
+  }
+  main .section_02 .text h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+@media screen and (max-width: 600px) {
+  main .section_02 .text h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  main .section_02 .text span {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+main .section_03 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .section_03 figure img {
+  width: 600px;
+}
+
+main .main_bg3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  z-index: 2;
+}
+
+main .main_bg3 figure img {
+  width: 600px;
+}
+
+@media screen and (max-width: 860px) {
+  main .section_03 figure img {
+    width: 305px;
+  }
+  main .main_bg3 figure img {
+    width: 305px;
+  }
+}
+
+main .section_video {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 500px;
+  opacity: 0;
+  transform: translateY(-150px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+main .section_video iframe {
+  width: 800px;
+  height: 500px;
+  max-width: calc(100% - 30px);
+}
+
+@media screen and (max-width: 700px) {
+  main .section_video iframe {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 630px) {
+  main .section_video iframe {
+    height: 320px;
+  }
+}
+@media screen and (max-width: 630px) {
+  main .section_video iframe {
+    height: 320px;
+  }
+}
+
+main .section_video_active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+main .section_04 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 500px;
+  opacity: 0.2;
+  transform: translateY(5px);
+}
+
+main .section_05 {
+  width: 100%;
+  height: 1500px;
+  background: black;
 }
