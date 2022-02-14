@@ -1,0 +1,53 @@
+main {
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+  height: 7000px;
+  background-image: url("../img/main/star_move.gif");
+  background-repeat: repeat-y;
+  background-size: contain;
+  background-position: center center;
+}
+
+main .main_bg1, main .main_bg2 {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+main .main_bg1 {
+  background-image: url("../img/main/main01.png");
+}
+
+main .main_bg2 {
+  background-image: url("../img/main/main02.png");
+}
+
+main .main_person {
+  width: 280px;
+  height: 300px;
+  background-image: url("../img/main/person.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: fixed;
+  left: calc(50% - 140px);
+  top: 150px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 860px) {
+  main .main_person {
+    width: 220px;
+    height: 234px;
+    left: calc(50% - 110px);
+    top: 150px;
+  }
+}

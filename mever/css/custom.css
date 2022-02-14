@@ -1,0 +1,354 @@
+
+/* font-family: 'Noto Sans KR', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* Default */
+:root {
+  font-size: 10px;
+  line-height: 1.5;
+  font-family: 'Noto Sans KR', sans-serif;
+  letter-spacing: -0.05em;
+}
+
+@media screen and (max-width: 860px) {
+  :root {
+    font-size: 8px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, header, footer, div, nav, section, ul, li, figure, img, video, iframe, h1, h2, h3, h4, h5, h6, p, span, strong, b, a, main, aside, button, input {
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+/* Start */
+
+header {
+  width: 100%;
+  height: 84px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0px 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+
+header .logo_gnb_wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header .logo {
+  padding-right: 20px;
+}
+
+header .logo a figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .logo a figure .logo_img {
+  width: 200px;
+}
+
+header .gnb ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header .gnb ul li {
+  padding: 0px 15px;
+}
+
+header .gnb ul li a span {
+  font-size: 2rem;
+  font-weight: 400;
+  transition: color 0.4s;
+}
+
+header .gnb ul li a:hover span {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+header .app_download {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header .app_download .pc_download {
+  position: relative;
+}
+
+header .app_download .pc_download .button:first-child {
+  margin-right: 10px;
+}
+
+header .app_download .pc_download .button {
+  width: 102px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .app_download .pc_download .button button {
+  width: 100%;
+  height: 32px;
+  border-radius: 16px;
+  border: 1px solid rgb(255, 212, 0);
+  background-color: transparent;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+header .app_download .pc_download .button button span {
+  color: rgb(255, 212, 0);
+  transition: all 0.4s;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+header .app_download .pc_download:hover .button button {
+  background-color: rgba(255, 212, 0, 0.9);
+  border: 1px solid rgba(255, 212, 0, 0.9);
+}
+
+header .app_download .pc_download:hover .button button span {
+  color: white;
+}
+
+header .app_download .pc_download .h_dropdown {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: none;
+  text-align: center;
+}
+
+header .app_download .pc_download .h_dropdown ul li {
+  margin-top: 10px;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+header .app_download .pc_download .h_dropdown ul li a span{
+  font-size: 1.5rem;
+  transition: color 0.4s;
+}
+
+header .app_download .pc_download .h_dropdown ul li a:hover span {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+header .app_download .pc_download_on .h_dropdown {
+  display: block;
+}
+
+header .app_download .pc_download_on .h_dropdown ul li:nth-child(1) {
+  animation: h_dropdown 0.4s forwards;
+}
+
+header .app_download .pc_download_on .h_dropdown ul li:nth-child(2) {
+  animation: h_dropdown 0.4s 0.15s forwards;
+}
+
+@keyframes h_dropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+header .app_download .m_download {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  opacity: 0;
+}
+
+header .app_download .m_download a {
+  border-radius: 15px;
+  border: 1px solid rgb(255, 212, 0);
+  color: rgb(255, 212, 0);
+  padding: 5px;
+}
+
+@media screen and (max-width: 1315px) {
+  header {
+    height: 74px;
+    padding: 0px 7rem;
+  }
+  header .logo {
+    padding-right: 1rem;
+  }
+  header .logo a figure .logo_img {
+    width: 180px;
+  }
+  header .gnb ul li {
+    padding: 0px 12px;
+  }
+  header .gnb ul li a span {
+    font-size: 1.8rem;
+  }
+  header .app_download .pc_download .button {
+    width: 82px;
+  }
+  header .app_download .pc_download .button button {
+    height: 27px;
+    border-radius: 14px;
+  }
+  header .app_download .pc_download .button button span {
+    font-size: 1.3rem;
+  }
+  header .app_download .pc_download .h_dropdown ul li a span{
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  header {
+    height: 64px;
+    padding: 0px 4rem;
+  }
+  header .logo a figure .logo_img {
+    width: 160px;
+  }
+  header .gnb ul li {
+    padding: 0px 10px;
+  }
+  header .gnb ul li a span {
+    font-size: 1.7rem;
+  }
+  header .app_download .pc_download .button {
+    width: 72px;
+  }
+  header .app_download .pc_download .button button span {
+    font-size: 1.1rem;
+  }
+  header .app_download .pc_download .h_dropdown ul li a span{
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  header {
+    height: 64px;
+    padding: 0px 1.5rem;
+  }
+  header .logo a figure .logo_img {
+    width: 140px;
+  }
+  header .gnb ul li {
+    padding: 0px 7px;
+  }
+  header .gnb ul li a span {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  header .gnb {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  header .app_download .pc_download {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  header .app_download .m_download {
+    display: flex;
+    opacity: 1;
+  }
+}
+
+.m_footer {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+}
+
+.m_footer .content_wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.m_footer .content_wrap ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px 15px;
+}
+
+.m_footer .content_wrap ul li {
+  width: 20%;
+}
+
+.m_footer .content_wrap ul li a {
+  opacity: 0.5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.m_footer .content_wrap ul li a p {
+  color: #444444;
+  font-size: 1.5rem;
+}
+
+.m_footer .content_wrap ul .active a {
+  opacity: 1;
+}
+
+@media screen and (max-width: 860px) {
+  .m_footer {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+}
