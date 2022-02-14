@@ -20,6 +20,8 @@ window.addEventListener("DOMContentLoaded", (e) => {
   let section_04 = document.getElementsByClassName("section_04")[0];
   let section_04_opacity = 0.2;
 
+  let section_05 = document.getElementsByClassName("section_05")[0];
+
   let scroll_fn = (e) => {
     main_bg1.style.backgroundPosition = `center ${-window.scrollY / 5}px`;
     main_bg2.style.backgroundPosition = `center ${-window.scrollY / 2}px`;
@@ -50,13 +52,21 @@ window.addEventListener("DOMContentLoaded", (e) => {
     }
 
     if (window.scrollY + vh100 >= section_04.offsetTop) {
-      section_04_opacity = 0.2 + (window.scrollY + vh100 - section_04.offsetTop) / 3000;
+      section_04_opacity = (window.scrollY + vh100 - section_04.offsetTop) / 3000;
       if (section_04_opacity >= 1) {
         section_04_opacity = 1;
       }
-      section_04.style.opacity = `${section_04_opacity}`;
+      main_person.style.transform = `scale(${1 - section_04_opacity})`;
     }
-  }
+
+    if (window.scrollY >= section_05.offsetTop) {
+      if (!section_05.classList.contains("section_05_active")) {
+        section_05.classList.add("section_05_active")
+      }
+    }
+  }// 함수 종료
+
+  scroll_fn(e);
 
   window.addEventListener("scroll", (e) => {
     scroll_fn(e);
